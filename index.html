@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Odyssey of the Mind - ASL Performance</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Landing / Welcome Screen -->
+    <div id="welcome-screen" class="screen active">
+        <div class="welcome-container">
+            <div class="logo-area">
+                <div class="asl-icon">
+                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
+                        <path d="M20 38c0-4 2-8 6-10s8-2 12 0 6 6 6 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="32" cy="24" r="6" stroke="currentColor" stroke-width="2"/>
+                        <path d="M26 42l-2 8M38 42l2 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h1>Odyssey of the Mind</h1>
+                <p class="subtitle">ASL Sign Language Performance</p>
+            </div>
+            <div class="welcome-info">
+                <p>Welcome! This app provides American Sign Language (ASL) video interpretation of our performance story.</p>
+                <p class="instruction">Tap the button below to begin watching the ASL interpretation alongside the performance.</p>
+            </div>
+            <button id="start-btn" class="primary-btn" onclick="startApp()">
+                <span>Begin ASL Story</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main App Screen -->
+    <div id="app-screen" class="screen">
+        <!-- Header -->
+        <header class="app-header">
+            <h2>ASL Story</h2>
+            <div class="scene-indicator">
+                <span id="current-scene-label">Scene 1</span>
+                <span class="separator">/</span>
+                <span id="total-scenes-label">5</span>
+            </div>
+        </header>
+
+        <!-- Video Player Area -->
+        <div class="video-section">
+            <div class="video-container" id="video-container">
+                <!-- Video element for uploaded ASL videos -->
+                <video id="asl-video" playsinline controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- Placeholder when no video is loaded -->
+                <div id="video-placeholder" class="video-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                        <line x1="7" y1="2" x2="7" y2="22"></line>
+                        <line x1="17" y1="2" x2="17" y2="22"></line>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <line x1="2" y1="7" x2="7" y2="7"></line>
+                        <line x1="2" y1="17" x2="7" y2="17"></line>
+                        <line x1="17" y1="17" x2="22" y2="17"></line>
+                        <line x1="17" y1="7" x2="22" y2="7"></line>
+                    </svg>
+                    <p>ASL Video</p>
+                    <p class="placeholder-sub">Video will appear here</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Story Text Section -->
+        <div class="story-section">
+            <div class="story-card">
+                <h3 id="scene-title" class="scene-title">Scene Title</h3>
+                <div id="scene-text" class="scene-text">
+                    <p>Story text will appear here...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <nav class="nav-controls">
+            <button id="prev-btn" class="nav-btn" onclick="prevScene()" disabled>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                <span>Previous</span>
+            </button>
+            <div class="scene-dots" id="scene-dots"></div>
+            <button id="next-btn" class="nav-btn" onclick="nextScene()">
+                <span>Next</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </nav>
+    </div>
+
+    <script src="story-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
