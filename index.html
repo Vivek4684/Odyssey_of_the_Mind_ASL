@@ -27,10 +27,10 @@
             </div>
             <div class="welcome-info">
                 <p>Welcome! This app provides American Sign Language (ASL) video interpretation of "Lost in Omerland" by Thomas Jefferson Middle School, Edison, NJ.</p>
-                <p class="instruction">Tap the button below to follow along with the ASL interpretation of our Odyssey of the Mind performance.</p>
+                <p class="instruction">Tap the button below to watch the ASL interpretation of our Odyssey of the Mind performance.</p>
             </div>
             <button id="start-btn" class="primary-btn" onclick="startApp()">
-                <span>Begin ASL Story</span>
+                <span>Watch ASL Video</span>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                 </svg>
@@ -42,69 +42,37 @@
     <div id="app-screen" class="screen">
         <!-- Header -->
         <header class="app-header">
-            <h2>ASL Story</h2>
-            <div class="scene-indicator">
-                <span id="current-scene-label">Scene 1</span>
-                <span class="separator">/</span>
-                <span id="total-scenes-label">5</span>
-            </div>
+            <h2>Lost in Omerland - ASL</h2>
         </header>
 
-        <!-- Video Player Area -->
+        <!-- YouTube Video Player -->
         <div class="video-section">
-            <div class="video-container" id="video-container">
-                <!-- Video element for uploaded ASL videos -->
-                <video id="asl-video" playsinline controls>
-                    <source src="" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <!-- Placeholder when no video is loaded -->
-                <div id="video-placeholder" class="video-placeholder">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
-                        <line x1="7" y1="2" x2="7" y2="22"></line>
-                        <line x1="17" y1="2" x2="17" y2="22"></line>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <line x1="2" y1="7" x2="7" y2="7"></line>
-                        <line x1="2" y1="17" x2="7" y2="17"></line>
-                        <line x1="17" y1="17" x2="22" y2="17"></line>
-                        <line x1="17" y1="7" x2="22" y2="7"></line>
-                    </svg>
-                    <p>ASL Video</p>
-                    <p class="placeholder-sub">Video will appear here</p>
-                </div>
+            <div class="video-container">
+                <iframe
+                    id="youtube-player"
+                    src="https://www.youtube.com/embed/1Y7AfadC0L0?rel=0&modestbranding=1&playsinline=1"
+                    title="Lost in Omerland - ASL Sign Language Interpretation"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
             </div>
         </div>
 
         <!-- Story Text Section -->
         <div class="story-section">
             <div class="story-card">
-                <h3 id="scene-title" class="scene-title">Scene Title</h3>
-                <div id="scene-text" class="scene-text">
-                    <p>Story text will appear here...</p>
+                <h3 class="scene-title">Story Summary</h3>
+                <div class="scene-text">
+                    <p><strong>Lost in Omerland</strong> &mdash; Division 2, Problem 2</p>
+                    <p>Capt. SUPER and DUPER set out from planet <strong>CARNIVOSIA</strong> to find a mythical crystal to save their dying planet. After a meteor crash-lands them on the wrong spot, they meet <strong>DR. BLOOPNAR</strong> and the quirky device <strong>SIMETRA</strong>.</p>
+                    <p>Their journey takes them through <strong>Cyberpunk City</strong> where they befriend a robot, survive a betrayal in a glowing forest, and discover the <strong>Crystal Cave</strong>. In the end, they find the crystal was buried under their crashed UFO all along!</p>
+                    <p>The story celebrates <strong>friendship, forgiveness, and teamwork</strong>.</p>
                 </div>
             </div>
         </div>
-
-        <!-- Navigation Controls -->
-        <nav class="nav-controls">
-            <button id="prev-btn" class="nav-btn" onclick="prevScene()" disabled>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-                <span>Previous</span>
-            </button>
-            <div class="scene-dots" id="scene-dots"></div>
-            <button id="next-btn" class="nav-btn" onclick="nextScene()">
-                <span>Next</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-            </button>
-        </nav>
     </div>
 
-    <script src="story-data.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
