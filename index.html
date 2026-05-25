@@ -3,75 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Lost in Omerland - ASL Performance</title>
+    <title>Lost in Omerland - ASL Performance | Odyssey of the Mind</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Landing / Welcome Screen -->
-    <div id="welcome-screen" class="screen active">
-        <div class="welcome-container">
-            <div class="logo-area">
-                <div class="asl-icon">
-                    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
-                        <path d="M20 38c0-4 2-8 6-10s8-2 12 0 6 6 6 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <circle cx="32" cy="24" r="6" stroke="currentColor" stroke-width="2"/>
-                        <path d="M26 42l-2 8M38 42l2 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    <!-- Watermark -->
+    <div class="watermark">ODYSSEY OF THE MIND</div>
+
+    <!-- Floating stars background -->
+    <div class="stars-bg" aria-hidden="true">
+        <div class="star star-1"></div>
+        <div class="star star-2"></div>
+        <div class="star star-3"></div>
+        <div class="star star-4"></div>
+        <div class="star star-5"></div>
+        <div class="star star-6"></div>
+        <div class="star star-7"></div>
+        <div class="star star-8"></div>
+    </div>
+
+    <!-- Header / Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <!-- Logo / Icon -->
+            <div class="logo">
+                <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                    <!-- Planet ring -->
+                    <ellipse cx="60" cy="60" rx="50" ry="18" stroke="url(#grad1)" stroke-width="2" opacity="0.6"/>
+                    <!-- Planet body -->
+                    <circle cx="60" cy="60" r="30" fill="url(#grad2)" opacity="0.9"/>
+                    <!-- Crystal on top -->
+                    <polygon points="60,15 52,35 68,35" fill="#a78bfa" opacity="0.9"/>
+                    <polygon points="60,15 55,30 65,30" fill="#c4b5fd"/>
+                    <!-- ASL hand silhouette -->
+                    <path d="M48 55 C48 50 52 47 56 48 L58 42 C59 40 62 40 63 42 L64 48 C66 47 69 48 69 51 L70 48 C71 46 74 46 74 49 L73 56 C73 60 71 64 67 66 L62 68 C58 69 54 67 52 64 L48 58 Z" fill="white" opacity="0.95"/>
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#7c3aed"/>
+                            <stop offset="100%" style="stop-color:#2563eb"/>
+                        </linearGradient>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1e3a5f"/>
+                            <stop offset="100%" style="stop-color:#2563eb"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <h1 class="title">Lost in Omerland</h1>
+            <p class="tagline">ASL Sign Language Interpretation</p>
+            <p class="team-label">Odyssey of the Mind &bull; Division 2 &bull; Problem 2</p>
+            <p class="school">Thomas Jefferson Middle School, Edison, New Jersey</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- YouTube Video Section -->
+        <section class="video-section" id="video">
+            <h2 class="section-heading">
+                <span class="heading-icon">&#9654;</span>
+                ASL Video Interpretation
+            </h2>
+            <div class="video-wrapper">
+                <div class="video-container">
+                    <iframe
+                        id="youtube-player"
+                        src="https://www.youtube.com/embed/1Y7AfadC0L0?rel=0&modestbranding=1&playsinline=1"
+                        title="Lost in Omerland - ASL Sign Language Interpretation"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Summary -->
+        <section class="summary-section" id="summary">
+            <h2 class="section-heading">
+                <span class="heading-icon">&#10024;</span>
+                Story Summary
+            </h2>
+            <div class="summary-card">
+                <div class="summary-icon">
+                    <!-- UFO icon -->
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <ellipse cx="24" cy="28" rx="18" ry="8" fill="#7c3aed" opacity="0.3"/>
+                        <ellipse cx="24" cy="26" rx="14" ry="6" fill="#a78bfa" opacity="0.5"/>
+                        <path d="M16 26 C16 20 20 16 24 16 C28 16 32 20 32 26" fill="#2563eb" opacity="0.8"/>
+                        <circle cx="24" cy="14" r="3" fill="#fbbf24"/>
                     </svg>
                 </div>
-                <h1>Lost in Omerland</h1>
-                <p class="subtitle">ASL Sign Language Performance</p>
+                <p>In this comic sci-fi adventure, heroes <strong>Capt. SUPER</strong> and <strong>DUPER</strong> launch from the dying planet <strong>CARNIVOSIA</strong> in search of a mythical crystal &mdash; the only hope to restore their world.</p>
+                <p>After a meteor crash-lands them on the wrong spot, they team up with the eccentric <strong>DR. BLOOPNAR</strong> and the hilariously unreliable device <strong>SIMETRA</strong>. Their journey takes them through <strong>Cyberpunk City</strong>, a glowing forest trap, and into the <strong>Crystal Cave</strong>.</p>
+                <p>Along the way, they befriend a dramatic robot, survive betrayal, and discover that the crystal was buried under their crashed UFO <strong>ARTEMIS</strong> all along!</p>
+                <p class="summary-theme">A story celebrating <strong>friendship, forgiveness, and teamwork</strong>.</p>
             </div>
-            <div class="welcome-info">
-                <p>Welcome! This app provides American Sign Language (ASL) video interpretation of "Lost in Omerland" by Thomas Jefferson Middle School, Edison, NJ.</p>
-                <p class="instruction">Tap the button below to watch the ASL interpretation of our Odyssey of the Mind performance.</p>
-            </div>
-            <button id="start-btn" class="primary-btn" onclick="startApp()">
-                <span>Watch ASL Video</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                </svg>
-            </button>
-        </div>
-    </div>
+        </section>
 
-    <!-- Main App Screen -->
-    <div id="app-screen" class="screen">
-        <!-- Header -->
-        <header class="app-header">
-            <h2>Lost in Omerland - ASL</h2>
-        </header>
+        <!-- Detailed Story -->
+        <section class="story-section" id="story">
+            <h2 class="section-heading">
+                <span class="heading-icon">&#128214;</span>
+                Detailed Story
+            </h2>
 
-        <!-- YouTube Video Player -->
-        <div class="video-section">
-            <div class="video-container">
-                <iframe
-                    id="youtube-player"
-                    src="https://www.youtube.com/embed/1Y7AfadC0L0?rel=0&modestbranding=1&playsinline=1"
-                    title="Lost in Omerland - ASL Sign Language Interpretation"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
+            <div class="story-timeline">
+                <!-- Act 1 -->
+                <div class="story-act">
+                    <div class="act-marker">
+                        <span class="act-number">1</span>
+                    </div>
+                    <div class="act-content">
+                        <h3>The Crash Landing</h3>
+                        <p>Capt. SUPER and DUPER set out to find the mythical crystal believed to be the only way to restore their collapsing planet. After receiving a map, the team launches with confidence but is immediately struck by a meteor and crash-lands on the right planet, but in the wrong place.</p>
+                        <p>As they regroup, a suspicious figure secretly steals an important gear from their ship, leaving them unable to continue. While taking stock of their broken UFO <strong>ARTEMIS</strong>, they encounter the eccentric <strong>"DR. BLOOPNAR, THE INTERGALACTIC JELLYBEAN"</strong> and a quirky device called <strong>"SIMETRA"</strong> that tries in vain to help but keeps malfunctioning each time.</p>
+                        <p>CAPT. SUPER studies the map, spots a nearby village, and leads the group onward in hopes of finding help.</p>
+                    </div>
+                </div>
 
-        <!-- Story Text Section -->
-        <div class="story-section">
-            <div class="story-card">
-                <h3 class="scene-title">Story Summary</h3>
-                <div class="scene-text">
-                    <p><strong>Lost in Omerland</strong> &mdash; Division 2, Problem 2</p>
-                    <p>Capt. SUPER and DUPER set out from planet <strong>CARNIVOSIA</strong> to find a mythical crystal to save their dying planet. After a meteor crash-lands them on the wrong spot, they meet <strong>DR. BLOOPNAR</strong> and the quirky device <strong>SIMETRA</strong>.</p>
-                    <p>Their journey takes them through <strong>Cyberpunk City</strong> where they befriend a robot, survive a betrayal in a glowing forest, and discover the <strong>Crystal Cave</strong>. In the end, they find the crystal was buried under their crashed UFO all along!</p>
-                    <p>The story celebrates <strong>friendship, forgiveness, and teamwork</strong>.</p>
+                <!-- Act 2 -->
+                <div class="story-act">
+                    <div class="act-marker">
+                        <span class="act-number">2</span>
+                    </div>
+                    <div class="act-content">
+                        <h3>Cyberpunk City</h3>
+                        <p>They arrive into the striking, futuristic setting of <strong>CYBERPUNK CITY</strong>, where their search for the missing gear takes an unexpected turn. As they marvel at the towering, colorful city, they encounter a dramatic and witty robot they call a <strong>"Mechanical Frankenstein"</strong> who reveals that the gear they need has damaged her life system.</p>
+                        <p>The heroes recover the gear &mdash; their first missing UFO piece &mdash; while DR. BLOOPNAR repairs the robot, leading to growing trust. Although offended by the "Frankenstein" insult, the robot agrees to help them find the crystal, joining as a new ally.</p>
+                    </div>
+                </div>
+
+                <!-- Act 3 -->
+                <div class="story-act">
+                    <div class="act-marker">
+                        <span class="act-number">3</span>
+                    </div>
+                    <div class="act-content">
+                        <h3>The Robot's Betrayal</h3>
+                        <p>Now a group of 4, they reach a glowing forest, only to discover that their new robot companion has secretly been plotting against them. Pretending to help, the robot lures the group into a trap and freezes them with the push of a button, creating a humorous interruption in the form of an absurd advertisement for <strong>CHEESE!</strong></p>
+                        <p>When her plan to steal their UFO fails, the team uses SIMETRA to get directions to the crystal caves &mdash; though the clue it shoots out is a picture of Shrek! Despite the confusion and comedy, the group finds their way forward.</p>
+                    </div>
+                </div>
+
+                <!-- Act 4 -->
+                <div class="story-act">
+                    <div class="act-marker">
+                        <span class="act-number">4</span>
+                    </div>
+                    <div class="act-content">
+                        <h3>The Crystal Cave</h3>
+                        <p>In the Crystal Cave, the heroes finally discover the last missing gear. Their relief is interrupted when the robot appears &mdash; the cave was her hidden base all along!</p>
+                        <p>In a surprisingly emotional moment, the robot raps and beatboxes her story:</p>
+                        <blockquote>
+                            <em>"I've been robbing from spaceships to get back home<br>
+                            'Coz my people left me here, a long time ago<br>
+                            I've been using this cave as a base, you know!<br>
+                            But now that you caught me, I don't know where to go!"</em>
+                        </blockquote>
+                        <p>Instead of rejecting her, the heroes offer a second chance &mdash; if she promises to help with honesty.</p>
+                    </div>
+                </div>
+
+                <!-- Act 5 -->
+                <div class="story-act">
+                    <div class="act-marker">
+                        <span class="act-number">5</span>
+                    </div>
+                    <div class="act-content">
+                        <h3>The Triumphant Return</h3>
+                        <p>The heroes return to the crash site, repair their UFO, and in a comic twist discover that the crystal had been buried below their crashed UFO <strong>ARTEMIS</strong> all along!</p>
+                        <p>With the crystal in hand, they head back to <strong>CARNIVOSIA</strong>, where they are celebrated with promotions and certificates. Their leaders welcome the new companions. SIMETRA attempts to translate and delivers: <em>"Which is more pathetic? The tin can that can't pass an I'm-not-a-robot test, or the guy who thinks a lab coat makes him intimidating?"</em></p>
+                        <p>The robot's parting promise: <strong>"Thank you for forgiving me and teaching me the value of friendship. I promise I will be truthful next TIME!"</strong></p>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section" id="team">
+            <h2 class="section-heading">
+                <span class="heading-icon">&#11088;</span>
+                Our Team
+            </h2>
+            <div class="team-card">
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">AA</div>
+                        <span class="member-name">Anvesha Anand</span>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">SA</div>
+                        <span class="member-name">Swagya Anand</span>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">MC</div>
+                        <span class="member-name">Marianne Caesar</span>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">SS</div>
+                        <span class="member-name">Safiyah Safahudeen</span>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">IG</div>
+                        <span class="member-name">Ishika Gupta</span>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">VA</div>
+                        <span class="member-name">Vedika Agrawal</span>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">VP</div>
+                        <span class="member-name">Varsha Punugoti</span>
+                    </div>
+                </div>
+                <p class="team-school">Thomas Jefferson Middle School &bull; Edison, NJ &bull; USA</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <svg width="24" height="24" viewBox="0 0 64 64" fill="none">
+                    <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2"/>
+                    <path d="M22 38c0-3 2-6 5-8s7-2 10 0 5 5 5 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="32" cy="26" r="5" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <span>Odyssey of the Mind 2025</span>
+            </div>
+            <p class="footer-note">ASL interpretation provided for accessibility during the World Finals performance.</p>
         </div>
-    </div>
+    </footer>
 
     <script src="app.js"></script>
 </body>
